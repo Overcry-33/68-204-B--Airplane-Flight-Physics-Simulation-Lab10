@@ -44,9 +44,11 @@ public class AirplanePhysicsController : MonoBehaviour
         if (kb.spaceKey.isPressed)
         {
             engineOn = true;
+
             // แรงขับไปข้างหน้า
             rb.AddRelativeForce(Vector3.forward * thrust, ForceMode.Acceleration);
         }
+
         // --- SPEED - หาความเร็วตามทิศหน้า -------
         float forwardSpeed = Vector3.Dot(rb.linearVelocity, transform.forward);
 
@@ -109,5 +111,5 @@ public class AirplanePhysicsController : MonoBehaviour
         // แสดงทิศ forward
         Debug.DrawRay(transform.position, transform.forward * 5f, Color.blue);
     }
-}
 
+}
